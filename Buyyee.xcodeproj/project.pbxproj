@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3C44CF4D105F42AAB357D20F /* PBXContainerItemProxy */ = {
+		E756CCA62F56C7D9004C190B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
@@ -39,28 +39,29 @@
 		9006A72831CD49DA94638016 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		94207AB5E97A44ACB7937444 /* BuyyeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyyeeApp.swift; sourceTree = "<group>"; };
 		A0CE7F590B7A4C77B2353D6E /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
-		A9BC8A479B134AFBB1296F42 /* BuyyeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuyyeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8125A56A9DE43E5A01CAB0A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C3A416DA76B344248AE661FF /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
 		E71E657464044C39A85FB885 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		E750F8E314034C7889E38FE9 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		E756CCA22F56C7D9004C190B /* BuyyeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuyyeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		E756CCA32F56C7D9004C190B /* BuyyeeTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = BuyyeeTests; sourceTree = "<group>"; };
 		E7D0F2FE2F4D29C50064E0A4 /* Cart */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Cart; sourceTree = "<group>"; };
 		E7D0F2FF2F4D29CC0064E0A4 /* Checkout */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Checkout; sourceTree = "<group>"; };
 		E7D0F3002F4D29D50064E0A4 /* ProductList */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ProductList; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BDD867CB9AD3433B858E263B /* Frameworks */ = {
+		D313788EC99144EA9567D25A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D313788EC99144EA9567D25A /* Frameworks */ = {
+		E756CC9F2F56C7D9004C190B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				3A1D9A455B5C416E8456774E /* Buyyee.app */,
-				A9BC8A479B134AFBB1296F42 /* BuyyeeTests.xctest */,
+				E756CCA22F56C7D9004C190B /* BuyyeeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,18 +112,11 @@
 			path = DesignSystem;
 			sourceTree = "<group>";
 		};
-		8082207A8E0348EEB25503DC /* BuyyeeTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BuyyeeTests;
-			sourceTree = "<group>";
-		};
 		C3BE018CEE2646CCBC9078A2 = {
 			isa = PBXGroup;
 			children = (
 				77493C28DF0245F4AA5FD24E /* Buyyee */,
-				8082207A8E0348EEB25503DC /* BuyyeeTests */,
+				E756CCA32F56C7D9004C190B /* BuyyeeTests */,
 				42B617B8171B4154A2B499E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -181,22 +175,27 @@
 			productReference = 3A1D9A455B5C416E8456774E /* Buyyee.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7D3A15503EDF49FFA129C4AD /* BuyyeeTests */ = {
+		E756CCA12F56C7D9004C190B /* BuyyeeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F964F1732D2644EFA2568999 /* Build configuration list for PBXNativeTarget "BuyyeeTests" */;
+			buildConfigurationList = E756CCA82F56C7D9004C190B /* Build configuration list for PBXNativeTarget "BuyyeeTests" */;
 			buildPhases = (
-				26EB4B19EB654AF5BAD1C8A7 /* Sources */,
-				BDD867CB9AD3433B858E263B /* Frameworks */,
-				DC9003234989488488282D77 /* Resources */,
+				E756CC9E2F56C7D9004C190B /* Sources */,
+				E756CC9F2F56C7D9004C190B /* Frameworks */,
+				E756CCA02F56C7D9004C190B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8CF6E1D66C344A10B26B4139 /* PBXTargetDependency */,
+				E756CCA72F56C7D9004C190B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E756CCA32F56C7D9004C190B /* BuyyeeTests */,
 			);
 			name = BuyyeeTests;
+			packageProductDependencies = (
+			);
 			productName = BuyyeeTests;
-			productReference = A9BC8A479B134AFBB1296F42 /* BuyyeeTests.xctest */;
+			productReference = E756CCA22F56C7D9004C190B /* BuyyeeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -206,14 +205,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					262505312896498597CE26FD = {
 						CreatedOnToolsVersion = 15.0;
 					};
-					7D3A15503EDF49FFA129C4AD = {
-						CreatedOnToolsVersion = 15.0;
+					E756CCA12F56C7D9004C190B = {
+						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 262505312896498597CE26FD;
 					};
 				};
@@ -232,7 +231,7 @@
 			projectRoot = "";
 			targets = (
 				262505312896498597CE26FD /* Buyyee */,
-				7D3A15503EDF49FFA129C4AD /* BuyyeeTests */,
+				E756CCA12F56C7D9004C190B /* BuyyeeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,7 +244,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC9003234989488488282D77 /* Resources */ = {
+		E756CCA02F56C7D9004C190B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,13 +254,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		26EB4B19EB654AF5BAD1C8A7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		50B9784CCD354710885FE952 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,13 +272,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E756CC9E2F56C7D9004C190B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8CF6E1D66C344A10B26B4139 /* PBXTargetDependency */ = {
+		E756CCA72F56C7D9004C190B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 262505312896498597CE26FD /* Buyyee */;
-			targetProxy = 3C44CF4D105F42AAB357D20F /* PBXContainerItemProxy */;
+			targetProxy = E756CCA62F56C7D9004C190B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -408,45 +407,110 @@
 			};
 			name = Release;
 		};
-		C49AFB224DC04EF28F755B6C /* Release */ = {
+		E756CCA92F56C7D9004C190B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.buyyee.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronalcala.BuyyeeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Buyyee.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Buyyee";
-			};
-			name = Release;
-		};
-		C877BFD3CFEF441CB639B2A1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.buyyee.tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Buyyee.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Buyyee";
 			};
 			name = Debug;
+		};
+		E756CCAA2F56C7D9004C190B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronalcala.BuyyeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Buyyee.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Buyyee";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -469,11 +533,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F964F1732D2644EFA2568999 /* Build configuration list for PBXNativeTarget "BuyyeeTests" */ = {
+		E756CCA82F56C7D9004C190B /* Build configuration list for PBXNativeTarget "BuyyeeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C877BFD3CFEF441CB639B2A1 /* Debug */,
-				C49AFB224DC04EF28F755B6C /* Release */,
+				E756CCA92F56C7D9004C190B /* Debug */,
+				E756CCAA2F56C7D9004C190B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
