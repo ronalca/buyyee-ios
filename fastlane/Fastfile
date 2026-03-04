@@ -46,7 +46,7 @@ platform :ios do
     run_tests(
       project: "Buyyee.xcodeproj",
       scheme: "Buyyee",
-      destination: "platform=iOS Simulator,OS=latest,name=iPhone 15 Pro",
+      destination: "platform=iOS Simulator,OS=18.2,name=iPhone 16",
       clean: true,
       code_coverage: true,
       output_directory: "fastlane/test_output",
