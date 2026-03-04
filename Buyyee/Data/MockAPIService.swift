@@ -60,9 +60,9 @@ final class MockAPIService: NetworkServiceProtocol, @unchecked Sendable {
 
         let orderNumber = "BUY-\(Int(Date().timeIntervalSince1970))-\(Int.random(in: 1000...9999))"
 
-        var installmentPlan: InstallmentPlan? = nil
-        var downPaymentAmt: Decimal? = nil
-        var monthlyPaymentAmt: Decimal? = nil
+        var installmentPlan: InstallmentPlan?
+        var downPaymentAmt: Decimal?
+        var monthlyPaymentAmt: Decimal?
 
         if let bnpl = paymentMethod as? BNPLPayment {
             installmentPlan   = bnpl.plan

@@ -15,7 +15,7 @@ enum MockData {
         fullName: "Juan dela Cruz",
         email: "juan@buyyee.ph",
         phoneNumber: "+63 917 123 4567",
-        creditLimit:    Decimal(string: "150000")!,
+        creditLimit: Decimal(string: "150000")!,
         availableCredit: Decimal(string: "120000")!,
         isKYCVerified: true
     )

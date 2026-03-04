@@ -20,10 +20,10 @@ final class KeychainService: KeychainServiceProtocol, @unchecked Sendable {
     func save(_ data: Data, forKey key: String) throws {
         try? delete(forKey: key)
         let query: [CFString: Any] = [
-            kSecClass:          kSecClassGenericPassword,
-            kSecAttrService:    service,
-            kSecAttrAccount:    key,
-            kSecValueData:      data,
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrService: service,
+            kSecAttrAccount: key,
+            kSecValueData: data,
             kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
         ]
         let status = SecItemAdd(query as CFDictionary, nil)
@@ -34,11 +34,11 @@ final class KeychainService: KeychainServiceProtocol, @unchecked Sendable {
 
     func load(forKey key: String) throws -> Data {
         let query: [CFString: Any] = [
-            kSecClass:       kSecClassGenericPassword,
+            kSecClass: kSecClassGenericPassword,
             kSecAttrService: service,
             kSecAttrAccount: key,
-            kSecReturnData:  true,
-            kSecMatchLimit:  kSecMatchLimitOne
+            kSecReturnData: true,
+            kSecMatchLimit: kSecMatchLimitOne
         ]
         var result: AnyObject?
         let status = SecItemCopyMatching(query as CFDictionary, &result)
@@ -55,7 +55,7 @@ final class KeychainService: KeychainServiceProtocol, @unchecked Sendable {
 
     func delete(forKey key: String) throws {
         let query: [CFString: Any] = [
-            kSecClass:       kSecClassGenericPassword,
+            kSecClass: kSecClassGenericPassword,
             kSecAttrService: service,
             kSecAttrAccount: key
         ]

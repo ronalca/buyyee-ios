@@ -43,24 +43,24 @@ final class BNPLCalculator: BNPLCalculatorProtocol, @unchecked Sendable {
     }
 
     func monthlyPayment(principal: Decimal, plan: InstallmentPlan) -> Decimal {
-        let n = plan.months
+//        let numMonths = plan.months
         let annualRate = plan.annualInterestRate
 
         if annualRate == .zero {
-            return roundToCentavo(principal / Decimal(n))
+            return roundToCentavo(principal / Decimal(plan.months))
         }
 
-        let r = annualRate / 12
-        let onePlusR = NSDecimalNumber(decimal: 1 + r)
-        let onePlusRPowN = onePlusR.raising(toPower: n).decimalValue
-        let numerator = principal * r * onePlusRPowN
+        let rate = annualRate / 12
+        let onePlusR = NSDecimalNumber(decimal: 1 + rate)
+        let onePlusRPowN = onePlusR.raising(toPower: plan.months).decimalValue
+        let numerator = principal * rate * onePlusRPowN
         let denominator = onePlusRPowN - 1
         guard denominator != .zero else { return .zero }
         return roundToCentavo(numerator / denominator)
     }
 
     func generateSchedule(principal: Decimal, plan: InstallmentPlan) -> [InstallmentScheduleItem] {
-        let n = plan.months
+//        let n = plan.months
         let monthlyRate = plan.annualInterestRate / 12
         let payment = monthlyPayment(principal: principal, plan: plan)
         var schedule: [InstallmentScheduleItem] = []
@@ -68,11 +68,11 @@ final class BNPLCalculator: BNPLCalculatorProtocol, @unchecked Sendable {
         let calendar = Calendar.current
         let today = Date()
 
-        for month in 1...n {
+        for month in 1...plan.months {
             let dueDate = calendar.date(byAdding: .month, value: month, to: today) ?? today
             let interestComponent = roundToCentavo(balance * monthlyRate)
             let principalComponent = plan.annualInterestRate == .zero ? payment : payment - interestComponent
-            let isLast = month == n
+            let isLast = month == plan.months
             let adjPrincipal = isLast ? balance : principalComponent
             let adjPayment = isLast ? roundToCentavo(adjPrincipal + interestComponent) : payment
             balance -= adjPrincipal

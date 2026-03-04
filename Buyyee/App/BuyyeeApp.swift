@@ -11,14 +11,14 @@ import SwiftUI
 final class DependencyContainer: ObservableObject {
 
     // MARK: Services (concrete types, created once)
-    let networkService:  any NetworkServiceProtocol
+    let networkService: any NetworkServiceProtocol
     let keychainService: any KeychainServiceProtocol
     let biometricService: any BiometricServiceProtocol
-    let bnplCalculator:  any BNPLCalculatorProtocol
+    let bnplCalculator: any BNPLCalculatorProtocol
 
     // MARK: Repositories (depend on services)
-    let productRepository:     any ProductRepositoryProtocol
-    let cartRepository:        CartRepository
+    let productRepository: any ProductRepositoryProtocol
+    let cartRepository: CartRepository
     let transactionRepository: any TransactionRepositoryProtocol
 
     init() {

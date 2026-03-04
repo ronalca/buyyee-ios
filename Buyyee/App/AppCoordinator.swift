@@ -48,7 +48,7 @@ final class AppCoordinator: ObservableObject {
 struct AppCoordinatorView: View {
 
     @EnvironmentObject private var coordinator: AppCoordinator
-    @EnvironmentObject private var container:   DependencyContainer
+    @EnvironmentObject private var container: DependencyContainer
 
     var body: some View {
         TabView(selection: $coordinator.selectedTab) {

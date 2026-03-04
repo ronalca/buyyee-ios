@@ -21,7 +21,7 @@ final class ProductListViewModel: ObservableObject {
 
     @Published private(set) var viewState: ViewState<[Product]> = .idle
     @Published var searchText: String = ""
-    @Published var selectedCategory: ProductCategory? = nil
+    @Published var selectedCategory: ProductCategory?
 
     private let productRepository: any ProductRepositoryProtocol
     private let cartRepository: any CartRepositoryProtocol
