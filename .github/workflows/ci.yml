@@ -39,6 +39,9 @@ jobs:
 
       - name: Run CI lane
         run: bundle exec fastlane ci
+        env:
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: "120"
+          FASTLANE_XCODEBUILD_SETTINGS_RETRIES: "6"     
 
       - name: Upload test results
         if: always()
