@@ -23,7 +23,7 @@ platform :ios do
     swiftlint(
       mode: :lint,
       config_file: ".swiftlint.yml",
-      raise_if_error: true,
+      raise_if_swiftlint_error: true,
       reporter: "junit",
       output_file: "fastlane/test_output/swiftlint.xml"
     )
@@ -46,7 +46,7 @@ platform :ios do
     run_tests(
       project: "Buyyee.xcodeproj",
       scheme: "Buyyee",
-      devices: ["iPhone 16"],
+      devices: ["iPhone 16 Pro Max (18.6)"],
       clean: true,
       code_coverage: true,
       output_directory: "fastlane/test_output",

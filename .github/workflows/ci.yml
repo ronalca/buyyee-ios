@@ -1,0 +1,46 @@
+# .github/workflows/ci.yml
+name: iOS CI
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  ci:
+    name: Lint, Build & Test
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_16.app
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
+      - name: Create test output directory
+        run: mkdir -p fastlane/test_output
+
+      - name: Run CI lane
+        run: bundle exec fastlane ci
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: fastlane/test_output/
