@@ -1,0 +1,80 @@
+# .swiftlint.yml
+
+included:
+  - Buyyee/App
+  - Buyyee/Core
+  - Buyyee/Data
+  - Buyyee/DesignSystem
+  - Buyyee/Features
+
+excluded:
+  - Pods
+  - .build
+  - DerivedData
+  - fastlane
+  - BuyyeeTests
+  - Buyyee/Data/MockData.swift
+
+# ─── Disabled Rules ───────────────────────
+disabled_rules:
+  - trailing_whitespace
+  - todo
+  - line_length           # we handle this below with custom threshold
+
+# ─── Opt-in Rules ─────────────────────────
+opt_in_rules:
+  - force_unwrapping
+  - empty_count
+  - closure_spacing
+  - implicitly_unwrapped_optional
+  - discouraged_optional_boolean
+
+# ─── Rule Configurations ──────────────────
+line_length:
+  warning: 120
+  error: 150
+  ignores_comments: true
+  ignores_urls: true
+
+function_body_length:
+  warning: 60
+  error: 100
+
+function_parameter_count:
+  warning: 6
+  error: 8
+
+type_body_length:
+  warning: 300
+  error: 500
+
+file_length:
+  warning: 500
+  error: 800
+  ignore_comment_only_lines: true
+
+cyclomatic_complexity:
+  warning: 10
+  error: 20
+
+nesting:
+  type_level:
+    warning: 2
+  function_level:
+    warning: 3
+
+identifier_name:
+  min_length:
+    warning: 2
+    error: 1
+  excluded:
+    - id
+    - vm
+    - to
+    - x
+    - y
+    - e
+    - s
+
+force_cast: warning
+force_try: warning

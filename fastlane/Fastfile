@@ -1,0 +1,64 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+# fastlane/Fastfile
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Run SwiftLint"
+  lane :lint do
+    swiftlint(
+      mode: :lint,
+      config_file: ".swiftlint.yml",
+      raise_if_swiftlint_error: true,
+      reporter: "junit",
+      output_file: "fastlane/test_output/swiftlint.xml"
+    )
+  end
+
+  desc "Build without signing"
+  lane :build do
+    gym(
+      project: "Buyyee.xcodeproj",
+      scheme: "Buyyee",
+      skip_codesigning: true,
+      skip_archive: true,
+      clean: true,
+      xcargs: "CODE_SIGNING_ALLOWED=NO"
+    )
+  end
+
+  desc "Run tests"
+  lane :test do
+    run_tests(
+      project: "Buyyee.xcodeproj",
+      scheme: "Buyyee",
+      destination: "platform=iOS Simulator,OS=18.2,name=iPhone 16",
+      clean: true,
+      code_coverage: true,
+      output_directory: "fastlane/test_output",
+      output_files: "report.junit"
+    )
+  end
+
+  desc "Full CI — lint + build + test"
+  lane :ci do
+    lint
+    build
+    test
+  end
+
+end
