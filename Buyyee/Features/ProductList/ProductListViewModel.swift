@@ -40,7 +40,8 @@ final class ProductListViewModel: ObservableObject {
         searchTask?.cancel()
     }
 
-    func loadProducts() {
+    @discardableResult
+    func loadProducts() -> Task<Void, Never> {
         loadTask?.cancel()
         loadTask = Task {
             viewState = .loading
@@ -59,16 +60,19 @@ final class ProductListViewModel: ObservableObject {
                 viewState = .error(AppError.from(error))
             }
         }
+        return loadTask!
     }
 
-    func searchProducts(query: String) {
+    @discardableResult
+    func searchProducts(query: String) -> Task<Void, Never> {
         searchTask?.cancel()
         guard !query.trimmingCharacters(in: .whitespaces).isEmpty else {
-            loadProducts()
-            return
+            let fallbackTask = loadProducts()
+            searchTask = fallbackTask
+            return fallbackTask
         }
         searchTask = Task {
-            try? await Task.sleep(nanoseconds: 300_000_000) // 300 milisecond debounce delay
+            try? await Task.sleep(nanoseconds: 300_000_000) // 300ms debounce
             guard !Task.isCancelled else { return }
             viewState = .loading
             do {
@@ -81,11 +85,13 @@ final class ProductListViewModel: ObservableObject {
                 viewState = .error(AppError.from(error))
             }
         }
+        return searchTask!
     }
 
-    func selectCategory(_ category: ProductCategory?) {
+    @discardableResult
+    func selectCategory(_ category: ProductCategory?) -> Task<Void, Never> {
         selectedCategory = category
-        loadProducts()
+        return loadProducts()
     }
 
     func addToCart(_ product: Product) {
