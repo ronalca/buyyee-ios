@@ -4,6 +4,18 @@ A demo gadget marketplace with **Buy Now, Pay Later (BNPL)** and debit card paym
 
 ---
 
+##  Work in Progress — `feature/parcel-tracking`
+
+> This branch is actively under development. Last updated: March 2026
+
+<p align="center">
+  <img src="assets/parcel-tracking-wip.png" width="300" alt="" />
+</p>
+
+###  Parcel Tracking Feature
+
+Real-time parcel tracking built with native iOS frameworks — zero third-party dependencies.
+
 ## Demo
 
 <p align="center">
