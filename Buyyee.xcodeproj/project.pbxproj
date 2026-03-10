@@ -47,6 +47,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		E701EF522F59368B0053AD38 /* ParcelTracking */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ParcelTracking; sourceTree = "<group>"; };
 		E756CCA32F56C7D9004C190B /* BuyyeeTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = BuyyeeTests; sourceTree = "<group>"; };
 		E7D0F2FE2F4D29C50064E0A4 /* Cart */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Cart; sourceTree = "<group>"; };
 		E7D0F2FF2F4D29CC0064E0A4 /* Checkout */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Checkout; sourceTree = "<group>"; };
@@ -124,6 +125,7 @@
 		CA8E81D6E80D4790991C4165 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E701EF522F59368B0053AD38 /* ParcelTracking */,
 				E7D0F3002F4D29D50064E0A4 /* ProductList */,
 				E7D0F2FF2F4D29CC0064E0A4 /* Checkout */,
 				E7D0F2FE2F4D29C50064E0A4 /* Cart */,
@@ -166,6 +168,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E701EF522F59368B0053AD38 /* ParcelTracking */,
 				E7D0F2FE2F4D29C50064E0A4 /* Cart */,
 				E7D0F2FF2F4D29CC0064E0A4 /* Checkout */,
 				E7D0F3002F4D29D50064E0A4 /* ProductList */,
